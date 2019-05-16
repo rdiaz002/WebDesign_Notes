@@ -32,7 +32,25 @@ function loadDoc_two(URL, callback){
 
 function first_function(xhttp){
 
-    document.getElementById("FIRST_DIV").innerHTML = "This is the first callback";
+    document.getElementById("demo").innerHTML = "This is the first callback";
 
 }
 
+
+function handle_xml(xml){
+    let xmlDoc = xml.responseXML;
+    let table = "<table><tr><th>Title</th><th>Artist</th></tr>";
+    let x = xmlDoc.getElementsByTagName("CD");
+    for(let i = 0; i < x.length; i++){
+        table += "<tr><td>"+ x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue+"</td><td>"
+        +x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue+
+        "</td></tr>";
+    }
+    table+="</table>"
+    document.getElementById("demo").innerHTML=table;
+}
+
+function handle_JSON (json){
+    let jsondoc = JSON.parse(json.responseText)
+    console.log(jsondoc);
+}
