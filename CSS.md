@@ -21,6 +21,7 @@ To include a stylesheet in your html document you can include it in three ways.
             color:maroon;
             margin-left:40px;
         }
+        
         </style>
 3. Inline : Should only be used for developing and testing components. Inline should almost never be in production code. 
 
