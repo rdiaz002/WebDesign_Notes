@@ -11,3 +11,4 @@
 9. [GraphQL](./GraphQL.md)
 10. [Gatsby](./Gatsby.md)
 11. [Bootstrap](./Bootstrap.md)
+12. [AJAX](./AJAX.md)
